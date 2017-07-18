@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+DEB_BUILD_MAINT_OPTIONS="hardening=-all"
+
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/buildflags.mk
+
+%:
+	dh $@ --sourcedirectory=source
+
+override_dh_auto_configure:
+	cd source && (./waf configure || cat build/config.log )
+
+override_dh_auto_build:
+	cd source && ./waf build
+
+override_dh_auto_clean:
+	cd source && ./waf clean || true
+
+override_dh_auto_test override_dh_usrlocal override_dh_installinit override_dh_auto_install:
+	:
+

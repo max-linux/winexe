@@ -1,0 +1,19 @@
+winexe (1.1~gitbc996f-1max2) max; urgency=medium
+
+  * Build in MAX server 2017
+
+ -- Mario Izquierdo <hola@marioizquierdo.es>  Tue, 27 Jun 2017 22:18:08 +0200
+
+winexe (1.1~gitbc996f-1max1) max; urgency=low
+
+  * Build in MAX server 2014
+
+ -- Mario Izquierdo Rodríguez (Thinetic Systems SLNE) <mario.izquierdo@thinetic.es>  Tue, 23 Sep 2014 16:02:36 +0200
+
+winexe (1.1~gitbc996f-1) UNRELEASED; urgency=low
+
+  * Initial release. (Closes: #629100)
+
+ -- Fabio Fantoni <fabio.fantoni@m2r.biz>  Thu, 14 Nov 2013 10:46:15 +0100
+
+

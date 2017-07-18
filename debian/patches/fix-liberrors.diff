@@ -1,0 +1,14 @@
+Index: winexe-1.1~gitbc996f/source/wscript
+===================================================================
+--- winexe-1.1~gitbc996f.orig/source/wscript	2014-09-23 16:51:01.611929084 +0200
++++ winexe-1.1~gitbc996f/source/wscript	2014-09-23 16:51:47.691929189 +0200
+@@ -78,7 +78,8 @@
+                 ''' % (h in 'smb_cli.h smb_cliraw.h smb_composite.h util/debug.h'.split(), h))
+ 
+             libs = []
+-            for l in 'cli-ldap dcerpc dcerpc-samba errors popt talloc ndr-standard samba-hostconfig samba-credentials smbclient-raw'.split():
++            #for l in 'cli-ldap dcerpc dcerpc-samba errors popt talloc ndr-standard samba-hostconfig samba-credentials smbclient-raw'.split():
++            for l in 'cli-ldap dcerpc dcerpc-samba samba-errors popt talloc ndr-standard samba-hostconfig samba-credentials smbclient-raw'.split():
+                 if ctx.check(lib=l, libpath=ctx.env.SAMBA_LIBS, mandatory=False):
+                     libs.append(l)
+                 else:
